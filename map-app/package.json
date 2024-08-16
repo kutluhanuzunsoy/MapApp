@@ -1,0 +1,18 @@
+{
+  "name": "map-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite --port 5004",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.3"
+  },
+  "dependencies": {
+    "datatables.net-buttons-dt": "^3.1.0",
+    "datatables.net-dt": "^2.1.0",
+    "datatables.net-select-dt": "^2.0.3",
+    "ol": "^9.2.4"
+  }
+}

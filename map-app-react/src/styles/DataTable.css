@@ -1,0 +1,116 @@
+#data-table-container {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 600px;
+    max-height: calc(100% - 50px);
+    background-color: white;
+    z-index: 1000;
+    padding: 20px 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: auto;
+  }
+  
+  #data-table {
+    width: 100% !important;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  #data-table th, #data-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #data-table thead th {
+    background-color: #1d3962;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  #data-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .dataTables_wrapper .dataTables_filter {
+    float: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dataTables_wrapper .dataTables_filter input {
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  
+  .dataTables_wrapper .dataTables_length select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  .dt-btn {
+    padding: 3px 8px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 12px;
+  }
+  
+  .dt-btn-zoom {
+    background-color: #1d3962;
+    color: white;
+  }
+  
+  .dt-btn-zoom:hover {
+    background-color: #2c5491;
+  }
+  
+  .dt-btn-update {
+    background-color: #438b45; 
+    color: white;
+  }
+  
+  .dt-btn-update:hover {
+    background-color: #3d823f; 
+  }
+  
+  .dt-btn-delete {
+    background-color: #db3b30; 
+    color: white;
+  }
+  
+  .dt-btn-delete:hover {
+    background-color: #c21509; 
+  }
+  
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.3em 0.8em;
+    margin-left: 2px;
+    border: 1px solid #1d3962;
+    background-color: #f0f9ff;
+    color: #1d3962;
+    font-size: 12px;
+  }
+  
+  .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+  .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: #1d3962;
+    color: white !important;
+  }
+  
+  .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #91b3e1;
+    color: white !important;
+  }

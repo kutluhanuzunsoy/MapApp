@@ -1,0 +1,48 @@
+services:
+  backend:
+    build:
+      context: ./MapApp
+      dockerfile: Dockerfile
+    image: mapapp:latest
+    container_name: map-app-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+    depends_on:
+      - db
+    volumes:
+      - nuget_packages:/root/.nuget/packages
+
+  frontend:
+    build:
+      context: ./map-app-react
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
+    image: map-app-react:latest
+    container_name: map-app-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
+    depends_on:
+      - backend
+
+  db:
+    image: postgis/postgis:latest
+    container_name: map-app-db
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+  nuget_packages:
