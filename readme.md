@@ -14,6 +14,13 @@ MapApp is a full-stack application for managing and visualizing spatial data rep
 - Search and filter data using DataTables
 - Zoom to specific geometries on the map
 
+## Screenshots
+
+<img src="https://github.com/user-attachments/assets/9b04bc7c-bb0d-40bf-ad95-548e328a734b" alt="mapapp" width="500"/>
+<img src="https://github.com/user-attachments/assets/ba59e343-211a-4b04-9d62-03892b09cf76" alt="mapappupdategeo" width="500"/>
+<img src="https://github.com/user-attachments/assets/a808b40a-0330-4299-bf19-0c81f62a2381" alt="mapappdatatables" width="500"/>
+<img src="https://github.com/user-attachments/assets/84aae953-581c-411f-8085-6f8571585b99" alt="mapappeditwkt" width="500"/>
+
 ## Technologies Used
 
 - Backend: .NET 8, Entity Framework Core, Npgsql, NetTopologySuite
